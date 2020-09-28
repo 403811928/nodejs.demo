@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SAO仿造-学习作品</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+body{
+	background-color: #000;
+}
+.menu{
+	position: relative;
+	float: left;
+	width: 320px;
+	height: 1287.4px;
+	background-image: url(SAO/img/menu/bg_num.gif);
+	background-color: #000;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.menu h1{
+	margin: 43px 0 34px 20px;
+}
+.content{
+	position: absolute;
+	top:0;
+	margin-left: 320px;
+	width: 1199.2px;
+	height: 990px;
+	overflow: hidden;
+}
+.content_sub{
+	width: 5.94%;
+	height: 990px;
+	position: relative;
+	float: left;
+	transition: 0.5s ease;
+	overflow: hidden;
+}
+.content_hover{
+	width: 700px;
+	filter: brightness(1);
+}
+.sub_img{
+	width: 100%;
+	height: 94%;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+	filter: brightness(0.3);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:center;
+}
+.sub_img_hover{
+	filter: brightness(1);
+}
+.sub_title{
+	font-size: 15px;
+	color: #fff;
+	writing-mode: vertical-lr;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	filter: brightness(1);
+}	
+.sub_title_hover{
+	font-size: 60px;
+	margin-top: 45%;
+	transform: translateY(-20%);
+}
+.content_hover h3{
+	margin: 3px;
+	width: 100%;
+	height: 5%;
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+	left: 0;
+	color: #fff;
+	font-size: 25px;
+}
+
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="menu">
+			<h1>
+				<img src="./SAO/img/menu/titlelogo_global.png">
+			</h1>
+		</div>
+		<div class="content">
+			<div class="content_sub content_hover" id="content_sub1">
+				<p class="sub_img sub_img_hover" style="background-image: url(SAO/img/content_sub/alicization05.jpg);"></p>
+				<h2 class="sub_title">Alicization</h2>
+				<h3 class="bottom_title">Alicization</h3>
+			</div>
+			<div class="content_sub" id="content_sub2">
+				<p class="sub_img" style="background-image: url(SAO/img/content_sub/movie.jpg);"></p>
+				<h2 class="sub_title">Ordinal Scale</h2>
+				<h3 class="bottom_title">Ordinal Scale</h3>
+			</div>
+			<div class="content_sub" id="content_sub3">
+				<p class="sub_img" style="background-image: url(SAO/img/content_sub/mothers.jpg);"></p>
+				<h2 class="sub_title">Mother's Rosario</h2>
+				<h3 class="bottom_title">Mother's Rosario</h3>
+			</div>
+			<div class="content_sub" id="content_sub4">
+				<p class="sub_img" style="background-image: url(SAO/img/content_sub/calibur.jpg);"></p>
+				<h2 class="sub_title">Calibur</h2>
+				<h3 class="bottom_title">Calibur</h3>
+			</div>
+			<div class="content_sub" id="content_sub5">
+				<p class="sub_img" style="background-image: url(SAO/img/content_sub/phantombullet.jpg);"></p>
+				<h2 class="sub_title">Phantom Bullet</h2>
+				<h3 class="bottom_title">Phantom Bullet</h3>
+			</div>
+			<div class="content_sub" id="content_sub6">
+				<p class="sub_img" style="background-image: url(SAO/img/content_sub/extraedition.jpg);"></p>
+				<h2 class="sub_title">Extra Edition</h2>
+				<h3 class="bottom_title">Extra Edition</h3>
+			</div>
+			<div class="content_sub" id="content_sub7">
+				<p class="sub_img" style="background-image: url(SAO/img/content_sub/fairydance.jpg);"></p>
+				<h2 class="sub_title">Fairv Dance</h2>
+				<h3 class="bottom_title">Fairv Dance</h3>
+			</div>
+			<div class="content_sub" id="content_sub8">
+				<p class="sub_img" style="background-image: url(SAO/img/content_sub/aincrad.jpg);"></p>
+				<h2 class="sub_title">Aincrad</h2>
+				<h3 class="bottom_title">Aincrad</h3>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+var sub1 =  document.getElementById('content_sub1');
+var sub2 =  document.getElementById('content_sub2');
+var sub3 =  document.getElementById('content_sub3');
+var sub4 =  document.getElementById('content_sub4');
+var sub5 =  document.getElementById('content_sub5');
+var sub6 =  document.getElementById('content_sub6');
+var sub7 =  document.getElementById('content_sub7');
+var sub8 =  document.getElementById('content_sub8');
+var sub_arr = [sub1,sub2,sub3,sub4,sub5,sub6,sub7,sub8];
+var sub_hover = 1;
+sub1.onmouseover = function(){
+	sub_arr[sub_hover-1].className = 'content_sub';
+	this.className = 'content_sub content_hover';
+	sub_arr[sub_hover-1].children[0].className = 'sub_img';
+	this.children[0].className = 'sub_img sub_img_hover';
+	sub_arr[sub_hover-1].children[1].className = 'sub_title';
+	this.children[1].className = 'sub_title sub_title_hover';
+	sub_hover = 1;
+}
+sub2.onmouseover = function(){
+	sub_arr[sub_hover-1].className = 'content_sub';
+	this.className = 'content_sub content_hover';
+	sub_arr[sub_hover-1].children[0].className = 'sub_img';
+	this.children[0].className = 'sub_img sub_img_hover';
+	sub_arr[sub_hover-1].children[1].className = 'sub_title';
+	this.children[1].className = 'sub_title sub_title_hover';
+	sub_hover = 2;
+}
+sub3.onmouseover = function(){
+	sub_arr[sub_hover-1].className = 'content_sub';
+	this.className = 'content_sub content_hover';
+	sub_arr[sub_hover-1].children[0].className = 'sub_img';
+	this.children[0].className = 'sub_img sub_img_hover';
+	sub_arr[sub_hover-1].children[1].className = 'sub_title';
+	this.children[1].className = 'sub_title sub_title_hover';
+	sub_hover = 3;
+}
+sub4.onmouseover = function(){
+	sub_arr[sub_hover-1].className = 'content_sub';
+	this.className = 'content_sub content_hover';
+	sub_arr[sub_hover-1].children[0].className = 'sub_img';
+	this.children[0].className = 'sub_img sub_img_hover';
+	sub_arr[sub_hover-1].children[1].className = 'sub_title';
+	this.children[1].className = 'sub_title sub_title_hover';
+	sub_hover = 4;
+}
+sub5.onmouseover = function(){
+	sub_arr[sub_hover-1].className = 'content_sub';
+	this.className = 'content_sub content_hover';
+	sub_arr[sub_hover-1].children[0].className = 'sub_img';
+	this.children[0].className = 'sub_img sub_img_hover';
+	sub_arr[sub_hover-1].children[1].className = 'sub_title';
+	this.children[1].className = 'sub_title sub_title_hover';
+	sub_hover = 5;
+}
+sub6.onmouseover = function(){
+	sub_arr[sub_hover-1].className = 'content_sub';
+	this.className = 'content_sub content_hover';
+	sub_arr[sub_hover-1].children[0].className = 'sub_img';
+	this.children[0].className = 'sub_img sub_img_hover';
+	sub_arr[sub_hover-1].children[1].className = 'sub_title';
+	this.children[1].className = 'sub_title sub_title_hover';
+	sub_hover = 6;
+}
+sub7.onmouseover = function(){
+	sub_arr[sub_hover-1].className = 'content_sub';
+	this.className = 'content_sub content_hover';
+	sub_arr[sub_hover-1].children[0].className = 'sub_img';
+	this.children[0].className = 'sub_img sub_img_hover';
+	sub_arr[sub_hover-1].children[1].className = 'sub_title';
+	this.children[1].className = 'sub_title sub_title_hover';
+	sub_hover = 7;
+}
+sub8.onmouseover = function(){
+	sub_arr[sub_hover-1].className = 'content_sub';
+	this.className = 'content_sub content_hover';
+	sub_arr[sub_hover-1].children[0].className = 'sub_img';
+	this.children[0].className = 'sub_img sub_img_hover';
+	sub_arr[sub_hover-1].children[1].className = 'sub_title';
+	this.children[1].className = 'sub_title sub_title_hover';
+	sub_hover = 8;
+}
+
+
+
+
+
+
+	</script>
+</body>
+</html>
